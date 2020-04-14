@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <title>
+    <font face="kaiu.ttf">精實醫療查詢系統</font>
+  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script src="js/calendar.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+  <link rel="stylesheet" href="css/bootstrap-datepicker3.min.css" />
+
+
+</head>
+
+<body>
+  <div class="jumbotron text-center">
+    <h1>
+      <font face="標楷體">精實醫療查詢系統</font>
+    </h1>
+  </div>
+
+  <div class="col-sm-6 text-center" style="margin-left:30%">
+    <div class="row">
+      <div class="col-sm-4">
+        <h2>
+          <font face="標楷體">日期</font>
+        </h2>
+        <select onchange="location.href=this.options[this.selectedIndex].value">
+          　 <option value="20200325-1.html">2020-03-25</option>
+          　 <option value="20200326-1.html" selected="true">2020-03-26</option>
+          　 <option value="20200327-1.html">2020-03-27</option>
+          　 <option value="20200330-1.html">2020-03-30</option>
+          <option value="20200331-1.html">2020-03-31</option>
+          <option value="20200401-1.html">2020-04-01</option>
+        </select>
+      </div>
+      <div class="col-sm-4">
+        <h2>
+          <font face="標楷體">病歷號</font>
+        </h2>
+        <select onchange="location.href=this.options[this.selectedIndex].value">
+          　 　 <option value="20200326-1.html" selected="true">10239399</option>
+
+        </select>
+      </div>
+
+
+      <!--
+    <div class="col-sm-4" >
+        <h3>開始時間</h3>
+        <p>選擇開始時間</p>
+        <div class="btn-group">
+            <button type="button" class="btn btn-success">07:00</button>
+            <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Link 1</a>
+              <a class="dropdown-item" href="#">Link 2</a>
+            </div>
+          </div>
+    </div>
+    <div class="col-sm-4">
+      <h3>結束時間</h3>
+      <p>選擇結束時間</p>
+      <div class="btn-group">
+        <button type="button" class="btn btn-success">19:00</button>
+        <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Link 1</a>
+          <a class="dropdown-item" href="#">Link 2</a>
+        </div>
+      </div>
+    </div>
+    -->
+    </div>
+  </div>
+
+  <br><br><br><br>
+
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col order-1">
+        <font face="標楷體" size="6"><span>入室</span></font>
+      </div>
+      <div class="col order-2">
+        <font face="標楷體" size="6"><span>11:12:00</span></font>
+      </div>
+      <div class="col order-3">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <div class="input-group-text"><input type="checkbox" aria-label="Checkbox for following text input"></div>
+          </div>
+          <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="正確請打勾，錯誤則填寫正確時間">
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center align-items-center">
+      <div class="col order-1">
+        <font face="標楷體" size="6"><span>麻醉開始</span></font>
+      </div>
+      <div class="col order-2">
+        <font face="標楷體" size="6"><span>11:51:26</span></font>
+      </div>
+      <div class="col order-3">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <div class="input-group-text"><input type="checkbox" aria-label="Checkbox for following text input"></div>
+          </div>
+          <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="正確請打勾，錯誤則填寫正確時間">
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center align-items-center">
+      <div class="col order-1">
+        <font face="標楷體" size="6"><span>麻醉完成</span></font>
+      </div>
+      <div class="col order-2">
+        <font face="標楷體" size="6"><span>12:04:40</span></font>
+      </div>
+      <div class="col order-3">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <div class="input-group-text"><input type="checkbox" aria-label="Checkbox for following text input"></div>
+          </div>
+          <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="正確請打勾，錯誤則填寫正確時間">
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center align-items-center">
+      <div class="col order-1">
+        <font face="標楷體" size="6"><span>劃刀</span></font>
+      </div>
+      <div class="col order-2">
+        <font face="標楷體" size="6"><span>12:35:22</span></font>
+      </div>
+      <div class="col order-3">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <div class="input-group-text"><input type="checkbox" aria-label="Checkbox for following text input"></div>
+          </div>
+          <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="正確請打勾，錯誤則填寫正確時間">
+        </div>
+      </div>
+
+    </div>
+    <div class="row justify-content-center align-items-center">
+      <div class="col order-1">
+        <font face="標楷體" size="6"><span>縫合結束</span></font>
+      </div>
+      <div class="col order-2">
+        <font face="標楷體" size="6"><span> </span></font>
+      </div>
+      <div class="col order-3">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <div class="input-group-text"><input type="checkbox" aria-label="Checkbox for following text input"></div>
+          </div>
+          <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="正確請打勾，錯誤則填寫正確時間">
+        </div>
+      </div>
+
+    </div>
+    <div class="row justify-content-center align-items-center">
+      <div class="col order-1">
+        <font face="標楷體" size="6"><span>麻醉結束</span></font>
+      </div>
+      <div class="col order-2">
+        <font face="標楷體" size="6"><span>14:07:41</span></font>
+      </div>
+      <div class="col order-3">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <div class="input-group-text"><input type="checkbox" aria-label="Checkbox for following text input"></div>
+          </div>
+          <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="正確請打勾，錯誤則填寫正確時間">
+        </div>
+      </div>
+
+    </div>
+    <div class="row justify-content-center align-items-center">
+      <div class="col order-1">
+        <font face="標楷體" size="6"><span>離開手術間</span></font>
+      </div>
+      <div class="col order-2">
+        <font face="標楷體" size="6"><span>14:16:19</span></font>
+      </div>
+      <div class="col order-3">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <div class="input-group-text"><input type="checkbox" aria-label="Checkbox for following text input"></div>
+          </div>
+          <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="正確請打勾，錯誤則填寫正確時間">
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center align-items-center">
+      <div class="col order-1"><span></span></div>
+      <div class="col order-2"><span></span></div>
+      <div class="col order-3"><span><button type="button" class="btn btn-success"
+            style="width:120px;height:40px">送出</button></span></div>
+      <div class="col order-4"><span></span></div>
+      <div class="col order-5"><span></span></div>
+    </div>
+
+  </div>
+
+
+
+  <!--
+<div class="row justify-content-end align-items-center">
+    <div class="col-4"><pre><span>入室&#9;&#9;11:10:00</span></pre></div>
+    <div class="col-4"><input type="checkbox" aria-label="Checkbox for following text input"></div>
+</div>
+<div class="row justify-content-end align-items-center">
+    <div class="col-4"><pre><span>麻醉開始&#9;&#9;11:27:23</span></pre></div>
+    <div class="col-4"><input type="checkbox" aria-label="Checkbox for following text input"></div>
+</div>
+<div class="row justify-content-end align-items-center">
+    <div class="col-4"><pre><span>麻醉完成&#9;&#9;11:34:02</span></pre></div>
+    <div class="col-4"><input type="checkbox" aria-label="Checkbox for following text input"></div>
+</div>
+<div class="row justify-content-end align-items-center">
+    <div class="col-4"><pre><span>劃刀&#9;&#9;12:13:50</span></pre></div>
+    <div class="col-4"><input type="checkbox" aria-label="Checkbox for following text input"></div>
+</div>
+<div class="row justify-content-end align-items-center">
+    <div class="col-4"><pre><span>縫合結束&#9;&#9;14:02:30</span></pre></div>
+    <div class="col-4"><input type="checkbox" aria-label="Checkbox for following text input"></div>
+</div>
+<div class="row justify-content-end align-items-center">
+    <div class="col-4"><pre><span>麻醉結束&#9;&#9;14:30:12</span></pre></div>
+    <div class="col-4"><input type="checkbox" aria-label="Checkbox for following text input"></div>
+</div>
+<div class="row justify-content-end align-items-center">
+    <div class="col-4"><pre><span>離開手術間&#9;14:50:31</span></pre></div>
+    <div class="col-4"><input type="checkbox" aria-label="Checkbox for following text input"></div>
+</div>
+<br><br><br><br>
+<div class="row justify-content-end align-items-center">
+    <div class="col-4"><span></span></div>
+    <div class="col-4"><button type="button" class="btn btn-success">送出</button></div>
+</div>
+-->
+
+
+</body>
+
+</html>
